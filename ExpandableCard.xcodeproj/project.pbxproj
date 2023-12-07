@@ -8,18 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		DB70C3922B2038BF000B21B5 /* ExpandableCardApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB70C3912B2038BF000B21B5 /* ExpandableCardApp.swift */; };
-		DB70C3942B2038BF000B21B5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB70C3932B2038BF000B21B5 /* ContentView.swift */; };
+		DB70C3942B2038BF000B21B5 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB70C3932B2038BF000B21B5 /* CardView.swift */; };
 		DB70C3962B2038C1000B21B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB70C3952B2038C1000B21B5 /* Assets.xcassets */; };
 		DB70C39A2B2038C1000B21B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB70C3992B2038C1000B21B5 /* Preview Assets.xcassets */; };
+		DBB789D72B21B4D400D0404D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB789D62B21B4D400D0404D /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		DB70C38E2B2038BF000B21B5 /* ExpandableCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpandableCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB70C3912B2038BF000B21B5 /* ExpandableCardApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableCardApp.swift; sourceTree = "<group>"; };
-		DB70C3932B2038BF000B21B5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DB70C3932B2038BF000B21B5 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		DB70C3952B2038C1000B21B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB70C3972B2038C1000B21B5 /* ExpandableCard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExpandableCard.entitlements; sourceTree = "<group>"; };
 		DB70C3992B2038C1000B21B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		DBB789D62B21B4D400D0404D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,8 +55,9 @@
 			isa = PBXGroup;
 			children = (
 				DB70C3912B2038BF000B21B5 /* ExpandableCardApp.swift */,
-				DB70C3932B2038BF000B21B5 /* ContentView.swift */,
-				DB70C3952B2038C1000B21B5 /* Assets.xcassets */,
+				DBB789D42B21B4B300D0404D /* Views */,
+				DBB789D52B21B4C000D0404D /* Models */,
+				DBB789D82B21FCE800D0404D /* Resources */,
 				DB70C3972B2038C1000B21B5 /* ExpandableCard.entitlements */,
 				DB70C3982B2038C1000B21B5 /* Preview Content */,
 			);
@@ -67,6 +70,30 @@
 				DB70C3992B2038C1000B21B5 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DBB789D42B21B4B300D0404D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DB70C3932B2038BF000B21B5 /* CardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DBB789D52B21B4C000D0404D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DBB789D62B21B4D400D0404D /* Card.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DBB789D82B21FCE800D0404D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DB70C3952B2038C1000B21B5 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +112,8 @@
 			dependencies = (
 			);
 			name = ExpandableCard;
+			packageProductDependencies = (
+			);
 			productName = ExpandableCard;
 			productReference = DB70C38E2B2038BF000B21B5 /* ExpandableCard.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +142,8 @@
 				Base,
 			);
 			mainGroup = DB70C3852B2038BF000B21B5;
+			packageReferences = (
+			);
 			productRefGroup = DB70C38F2B2038BF000B21B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,7 +170,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB70C3942B2038BF000B21B5 /* ContentView.swift in Sources */,
+				DB70C3942B2038BF000B21B5 /* CardView.swift in Sources */,
+				DBB789D72B21B4D400D0404D /* Card.swift in Sources */,
 				DB70C3922B2038BF000B21B5 /* ExpandableCardApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
