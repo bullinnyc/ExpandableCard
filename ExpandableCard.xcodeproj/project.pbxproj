@@ -12,6 +12,7 @@
 		DB70C3962B2038C1000B21B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB70C3952B2038C1000B21B5 /* Assets.xcassets */; };
 		DB70C39A2B2038C1000B21B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB70C3992B2038C1000B21B5 /* Preview Assets.xcassets */; };
 		DB75F96E2B2ED8C500442A35 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DB75F96D2B2ED8C500442A35 /* .gitignore */; };
+		DB75F9702B2EDC0400442A35 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = DB75F96F2B2EDC0400442A35 /* demo.gif */; };
 		DBB789D72B21B4D400D0404D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB789D62B21B4D400D0404D /* Card.swift */; };
 		DBB789DC2B22BE1800D0404D /* SwipeToDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB789DB2B22BE1800D0404D /* SwipeToDelete.swift */; };
 		DBB789DF2B23216000D0404D /* Hidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB789DE2B23216000D0404D /* Hidden.swift */; };
@@ -28,6 +29,7 @@
 		DB70C3972B2038C1000B21B5 /* ExpandableCard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExpandableCard.entitlements; sourceTree = "<group>"; };
 		DB70C3992B2038C1000B21B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB75F96D2B2ED8C500442A35 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		DB75F96F2B2EDC0400442A35 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
 		DBB789D62B21B4D400D0404D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		DBB789DB2B22BE1800D0404D /* SwipeToDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeToDelete.swift; sourceTree = "<group>"; };
 		DBB789DE2B23216000D0404D /* Hidden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hidden.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 		DB70C3852B2038BF000B21B5 = {
 			isa = PBXGroup;
 			children = (
+				DB75F96F2B2EDC0400442A35 /* demo.gif */,
 				DB75F96D2B2ED8C500442A35 /* .gitignore */,
 				DB70C3902B2038BF000B21B5 /* ExpandableCard */,
 				DB70C38F2B2038BF000B21B5 /* Products */,
@@ -193,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB70C39A2B2038C1000B21B5 /* Preview Assets.xcassets in Resources */,
+				DB75F9702B2EDC0400442A35 /* demo.gif in Resources */,
 				DB75F96E2B2ED8C500442A35 /* .gitignore in Resources */,
 				DB70C3962B2038C1000B21B5 /* Assets.xcassets in Resources */,
 			);
