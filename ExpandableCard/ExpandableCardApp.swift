@@ -10,9 +10,16 @@ import SwiftUI
 
 @main
 struct ExpandableCardApp: App {
+    // MARK: - Body
+    
     var body: some Scene {
         WindowGroup {
-            CardView(cards: Card.getCards())
+            ContentView()
         }
     }
 }
+
+// MARK: - Helpers
+
+// Font names.
+let seravek = "Seravek"

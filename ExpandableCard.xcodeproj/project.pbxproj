@@ -12,6 +12,11 @@
 		DB70C3962B2038C1000B21B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB70C3952B2038C1000B21B5 /* Assets.xcassets */; };
 		DB70C39A2B2038C1000B21B5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB70C3992B2038C1000B21B5 /* Preview Assets.xcassets */; };
 		DBB789D72B21B4D400D0404D /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB789D62B21B4D400D0404D /* Card.swift */; };
+		DBB789DC2B22BE1800D0404D /* SwipeToDelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB789DB2B22BE1800D0404D /* SwipeToDelete.swift */; };
+		DBB789DF2B23216000D0404D /* Hidden.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB789DE2B23216000D0404D /* Hidden.swift */; };
+		DBB789E22B232ACD00D0404D /* Extension + View.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB789E12B232ACD00D0404D /* Extension + View.swift */; };
+		DBECF05A2B247794002EC292 /* OnChange.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBECF0592B247794002EC292 /* OnChange.swift */; };
+		DBFC7E272B269AF7005DEC17 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFC7E262B269AF7005DEC17 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		DB70C3972B2038C1000B21B5 /* ExpandableCard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ExpandableCard.entitlements; sourceTree = "<group>"; };
 		DB70C3992B2038C1000B21B5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DBB789D62B21B4D400D0404D /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		DBB789DB2B22BE1800D0404D /* SwipeToDelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeToDelete.swift; sourceTree = "<group>"; };
+		DBB789DE2B23216000D0404D /* Hidden.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hidden.swift; sourceTree = "<group>"; };
+		DBB789E12B232ACD00D0404D /* Extension + View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + View.swift"; sourceTree = "<group>"; };
+		DBECF0592B247794002EC292 /* OnChange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnChange.swift; sourceTree = "<group>"; };
+		DBFC7E262B269AF7005DEC17 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +66,9 @@
 			children = (
 				DB70C3912B2038BF000B21B5 /* ExpandableCardApp.swift */,
 				DBB789D42B21B4B300D0404D /* Views */,
+				DBB789DD2B22DE5300D0404D /* Modifiers */,
 				DBB789D52B21B4C000D0404D /* Models */,
+				DBB789E02B232AAC00D0404D /* Extensions */,
 				DBB789D82B21FCE800D0404D /* Resources */,
 				DB70C3972B2038C1000B21B5 /* ExpandableCard.entitlements */,
 				DB70C3982B2038C1000B21B5 /* Preview Content */,
@@ -75,6 +87,7 @@
 		DBB789D42B21B4B300D0404D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DBFC7E262B269AF7005DEC17 /* ContentView.swift */,
 				DB70C3932B2038BF000B21B5 /* CardView.swift */,
 			);
 			path = Views;
@@ -94,6 +107,24 @@
 				DB70C3952B2038C1000B21B5 /* Assets.xcassets */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		DBB789DD2B22DE5300D0404D /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				DBB789DB2B22BE1800D0404D /* SwipeToDelete.swift */,
+				DBB789DE2B23216000D0404D /* Hidden.swift */,
+				DBECF0592B247794002EC292 /* OnChange.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
+		DBB789E02B232AAC00D0404D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DBB789E12B232ACD00D0404D /* Extension + View.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,8 +201,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBB789DC2B22BE1800D0404D /* SwipeToDelete.swift in Sources */,
+				DBB789DF2B23216000D0404D /* Hidden.swift in Sources */,
+				DBFC7E272B269AF7005DEC17 /* ContentView.swift in Sources */,
 				DB70C3942B2038BF000B21B5 /* CardView.swift in Sources */,
 				DBB789D72B21B4D400D0404D /* Card.swift in Sources */,
+				DBECF05A2B247794002EC292 /* OnChange.swift in Sources */,
+				DBB789E22B232ACD00D0404D /* Extension + View.swift in Sources */,
 				DB70C3922B2038BF000B21B5 /* ExpandableCardApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,10 +352,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DmitryKononchuk.ExpandableCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -354,10 +390,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.DmitryKononchuk.ExpandableCard;
 				PRODUCT_NAME = "$(TARGET_NAME)";

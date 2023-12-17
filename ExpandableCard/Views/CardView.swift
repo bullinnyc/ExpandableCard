@@ -11,13 +11,14 @@ import SwiftUI
 struct CardView: View {
     // MARK: - Property Wrappers
     
+    @State private var cards: [Card]
     @State private var isExpanded = false
     
     // MARK: - Private Properties
     
-    private let cards: [Card]
     private let cardPackMax: Int
     private let isVolumetricPack: Bool
+    private let isHideColoredCardPack: Bool
     private let onTap: ((Int) -> Void)?
     
     private static let cardHeight: CGFloat = 100
@@ -35,7 +36,7 @@ struct CardView: View {
     private static let controlImageSize: CGSize = CGSize(width: 16, height: 9)
     private static let standartPadding: CGFloat = 16
     private static let cornerRadius: CGFloat = 16
-    private static let fontName = "Seravek"
+    private static let deletionWidth: CGFloat = 80
     
     // MARK: - Body
     
@@ -50,7 +51,10 @@ struct CardView: View {
                 id: \.element
             ) { index, card in
                 self.card(for: card)
-                    .overlay(coloredCardPack(for: index))
+                    .if(isHideColoredCardPack) { view in
+                        view
+                            .overlay(hideColoredCardPack(for: index))
+                    }
                     .frame(maxHeight: .infinity, alignment: .top)
                     .scaleEffect(getCardScale(for: index), anchor: .bottom)
                     .padding(.top, getCardTopPadding(for: CGFloat(index)))
@@ -60,7 +64,7 @@ struct CardView: View {
                             : index < cardPackMax ? 1 : .zero
                     )
                     .onTapGesture {
-                        if isExpanded {
+                        if isExpanded || cards.count == 1 {
                             onTap?(index)
                         }
                         
@@ -76,6 +80,7 @@ struct CardView: View {
             isVolumetricPack ? Self.cardPackHorizontalPadding : .zero
         )
         .fixedSize(horizontal: false, vertical: true)
+        .hidden(cards.isEmpty, remove: true)
         .animation(.bouncy, value: isExpanded)
     }
     
@@ -85,12 +90,15 @@ struct CardView: View {
         cards: [Card],
         cardPackMax: Int = 3,
         isVolumetricPack: Bool = true,
+        isHideColoredCardPack: Bool = true,
         onTap: ((Int) -> Void)? = nil
     ) {
-        self.cards = cards
         self.cardPackMax = cardPackMax
         self.isVolumetricPack = isVolumetricPack
+        self.isHideColoredCardPack = isHideColoredCardPack
         self.onTap = onTap
+        
+        _cards = State(wrappedValue: cards)
     }
     
     // MARK: - Private Methods
@@ -140,12 +148,7 @@ extension CardView {
                         )
                     
                     Text("Show less")
-                        .font(
-                            .custom(
-                                Self.fontName,
-                                size: Self.lessButtonFontSize
-                            )
-                        )
+                        .font(.custom(seravek, size: Self.lessButtonFontSize))
                 }
                 .foregroundStyle(Color("dayAndNight"))
             }
@@ -167,7 +170,7 @@ extension CardView {
                 let size = geometry.size
                 
                 Text(card.title)
-                    .font(.custom(Self.fontName, size: Self.cardTextFontSize))
+                    .font(.custom(seravek, size: Self.cardTextFontSize))
                     .foregroundStyle(Color("night"))
                     .padding([.leading, .top], Self.standartPadding)
                     .padding(.trailing, size.width * 0.42)
@@ -176,11 +179,25 @@ extension CardView {
             }
         }
         .frame(height: Self.cardHeight)
+        .swipeToDelete(
+            deletionWidth: Self.deletionWidth,
+            imageHeight: Self.cardHeight * 0.25,
+            cornerRadius: Self.cornerRadius,
+            isSwipeEnabled: isExpanded || cards.count == 1
+        ) {
+            withAnimation {
+                cards.removeAll(where: { $0.id == card.id })
+                
+                if isExpanded {
+                    isExpanded = !cards.isEmpty
+                }
+            }
+        }
         .clipShape(RoundedRectangle(cornerRadius: Self.cornerRadius))
     }
     
     @ViewBuilder
-    private func coloredCardPack(for index: Int) -> some View {
+    private func hideColoredCardPack(for index: Int) -> some View {
         if !isExpanded, index < cardPackMax, index != .zero {
             ZStack {
                 Color("day")
@@ -202,6 +219,7 @@ extension CardView {
         }
         
         Text("Some content")
+            .font(.custom(seravek, size: 16))
             .padding(.top)
         
         Spacer()
